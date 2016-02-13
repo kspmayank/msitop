@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Secondary Menus</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Link</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @secondary_menus.each do |secondary_menu| %>
+      <tr>
+        <td><%= secondary_menu.name %></td>
+        <td><%= secondary_menu.link %></td>
+        <td><%= secondary_menu.order %></td>
+        <td><%= link_to 'Show', secondary_menu %></td>
+        <td><%= link_to 'Edit', edit_secondary_menu_path(secondary_menu) %></td>
+        <td><%= link_to 'Destroy', secondary_menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Secondary menu', new_secondary_menu_path %>

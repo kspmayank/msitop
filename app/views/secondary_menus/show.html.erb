@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @secondary_menu.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @secondary_menu.link %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @secondary_menu.order %>
+</p>
+
+<%= link_to 'Edit', edit_secondary_menu_path(@secondary_menu) %> |
+<%= link_to 'Back', secondary_menus_path %>

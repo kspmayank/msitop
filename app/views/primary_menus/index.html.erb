@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Primary Menus</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Link</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @primary_menus.each do |primary_menu| %>
+      <tr>
+        <td><%= primary_menu.name %></td>
+        <td><%= primary_menu.link %></td>
+        <td><%= primary_menu.order %></td>
+        <td><%= link_to 'Show', primary_menu %></td>
+        <td><%= link_to 'Edit', edit_primary_menu_path(primary_menu) %></td>
+        <td><%= link_to 'Destroy', primary_menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Primary menu', new_primary_menu_path %>

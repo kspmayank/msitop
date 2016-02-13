@@ -1,0 +1,2 @@
+module PrimaryMenusHelper
+end

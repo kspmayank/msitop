@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @primary_menu.name %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @primary_menu.link %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @primary_menu.order %>
+</p>
+
+<%= link_to 'Edit', edit_primary_menu_path(@primary_menu) %> |
+<%= link_to 'Back', primary_menus_path %>
